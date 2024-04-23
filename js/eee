@@ -1,0 +1,120 @@
+fetch(url)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    if (!data || data.length === 0) {
+      throw new Error("User does not exist");
+    }
+    let newLogdata = data[0];
+    var address = newLogdata.address;
+    var telegram = newLogdata.telegram;
+    var referrals = newLogdata.referrals;
+    var referralId = newLogdata.referralId;
+
+    updateUI(referralId, referrals);
+
+    function updateUI(referralId, referrals) {
+        logDash.style.display = "none";
+        Giveaway.innerHTML = "Successfully Participated";
+        clearTask.style.display = "none";
+        closeTask.style.display = "none";
+
+        let paragraph = document.createElement("p");
+
+        let strongElement = document.createElement("strong");
+        strongElement.textContent = "Referrals ID:";
+        paragraph.appendChild(strongElement);
+
+        paragraph.appendChild(document.createTextNode(` ${referralId}`));
+
+        paragraph.setAttribute("id", "success");
+
+        let form = document.getElementById("airdrop-form");
+
+        form.appendChild(paragraph);
+
+        let Newparagraph = document.createElement("p");
+        var old = document.getElementById("success");
+        let strongElement2 = document.createElement("strong");
+        strongElement2.textContent = "RAT BALANCE :";
+        Newparagraph.appendChild(strongElement2);
+        Newparagraph.appendChild(document.createTextNode(" 8000 $RAT"));
+        Newparagraph.setAttribute("id", "ratu");
+        old.appendChild(Newparagraph);
+
+        let Newparagraph2 = document.createElement("p");
+        var old = document.getElementById("success");
+        let strongElement3 = document.createElement("strong");
+        strongElement3.textContent = "Referral Points : ";
+        Newparagraph2.appendChild(strongElement3);
+        Newparagraph2.appendChild(document.createTextNode(` ${referrals}`));
+        Newparagraph2.setAttribute("id", "ref");
+        old.appendChild(Newparagraph2);
+
+        let Newparagraph3 = document.createElement("p");
+        var old = document.getElementById("success");
+        let strongElement4 = document.createElement("strong");
+        strongElement4.textContent = "Share Referral Link :";
+        Newparagraph3.appendChild(strongElement4);
+        Newparagraph3.setAttribute("id", "shareref");
+        old.appendChild(Newparagraph3);
+
+        let Newparagraph4 = document.createElement("p");
+        var old = document.getElementById("success");
+        Newparagraph4.textContent = "Share your referral link:";
+        Newparagraph4.setAttribute("id", "sharetxt");
+        old.appendChild(Newparagraph4);
+
+        let inputElement = document.createElement("textarea");
+        inputElement.setAttribute("type", "text");
+        inputElement.setAttribute("name", "Refinput");
+        inputElement.setAttribute("id", "Inputref");
+        inputElement.readOnly = true;
+        // Make the textarea resizable
+        inputElement.style.resize = "both";
+        inputElement.value = `www.ratsonsol.com/airdrop?referral_id=${referralId}`;
+        old.appendChild(inputElement);
+
+        let Newparagraph5 = document.createElement("p");
+        var old = document.getElementById("success");
+        Newparagraph5.textContent = "Copy";
+        Newparagraph5.setAttribute("id", "CopyBtn");
+        old.appendChild(Newparagraph5);
+
+        Newparagraph5.addEventListener("click", function () {
+          var copyText = document.querySelector("#Inputref");
+          copyText.select();
+          document.execCommand("copy");
+          noti.style.display = "block";
+          setTimeout(function () {
+            noti.style.display = "none";
+          }, 1500);
+        });
+
+        let Newparagraph6 = document.createElement("p");
+        let imageElement = document.createElement("img");
+        imageElement.src = "./twitter.png";
+        var old = document.getElementById("success");
+        Newparagraph6.appendChild(imageElement);
+
+        Newparagraph6.textContent = "Share on Twitter";
+        Newparagraph6.setAttribute("id", "TwitterBtn");
+        old.appendChild(Newparagraph6);
+
+        Newparagraph6.addEventListener("click", function () {
+          window.open(
+            `
+            http://twitter.com/share?text=AIRDROP GIVEAWAY, Win 20,000 $RAT EACH FOR TOP 500 REFERRAL&url=https://www.ratsonsol.com/airdrop?referral_id=${referralId}`,
+            "_blank"
+          );
+        });
+      }
+  })
+  .catch((error) => {
+    console.error("Error fetching user data:", error);
+    loginErr.innerHTML = "Error: " + error.message; // Display error message
+  });
