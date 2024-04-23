@@ -73,7 +73,7 @@ window.addEventListener("load", function () {
 
     console.log("MIDO2", referralz);
 
-    const url = `https://api.ratsonsol.com/getref?referralId=${referralz}`;
+    const url = `https://api.bartonsols.com/getref?referralId=${referralz}`;
 
     // console.log(snapshot.val());
     // console.log(typeof snapshot.val());
@@ -132,7 +132,7 @@ window.addEventListener("load", function () {
           updateData(newData);
 
           function updateData(data) {
-            fetch("https://api.ratsonsol.com/updateReferrals", {
+            fetch("https://api.bartonsols.com/updateReferrals", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -395,7 +395,7 @@ function validateInputs() {
       //   equalTo(addValue)
       // );
 
-      const url = `https://api.ratsonsol.com/getdata?address=${addValue}`;
+      const url = `https://api.bartonsols.com/getdata?address=${addValue}`;
 
       // console.log(snapshot.val());
       // console.log(typeof snapshot.val());
@@ -445,7 +445,7 @@ function validateInputs() {
               //     alert(error);
               //   });
 
-              fetch("https://api.ratsonsol.com/submit", {
+              fetch("https://api.bartonsols.com/submit", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
@@ -533,7 +533,7 @@ function validateInputs() {
       let strongElement2 = document.createElement("strong");
       strongElement2.textContent = "BART BALANCE :";
       Newparagraph.appendChild(strongElement2);
-      Newparagraph.appendChild(document.createTextNode(" 8000 $BART"));
+      Newparagraph.appendChild(document.createTextNode(" 10000 $BART"));
       Newparagraph.setAttribute("id", "ratu");
       old.appendChild(Newparagraph);
 
@@ -680,7 +680,7 @@ function validateLogin() {
     //   equalTo(LogInfo)
     // );
 
-    const url = `https://api.ratsonsol.com/getdata?address=${LogInfo}`;
+    const url = `https://api.bartonsols.com/getdata?address=${LogInfo}`;
 
     // console.log(snapshot.val());
     // console.log(typeof snapshot.val());
@@ -731,7 +731,7 @@ function validateLogin() {
           let strongElement2 = document.createElement("strong");
           strongElement2.textContent = "BART BALANCE :";
           Newparagraph.appendChild(strongElement2);
-          Newparagraph.appendChild(document.createTextNode(" 8000 $BART"));
+          Newparagraph.appendChild(document.createTextNode(" 10000 $BART"));
           Newparagraph.setAttribute("id", "ratu");
           old.appendChild(Newparagraph);
 
