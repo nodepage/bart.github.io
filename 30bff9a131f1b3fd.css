@@ -33492,7 +33492,7 @@ body {
   }
 
   body {
-    background: url(https://ratsonsol.com/bg__main-mb.64532b1e.webp) no-repeat center 0 #010101 !important;
+    background: url("./bg__main-mb.64532b1e.webp") no-repeat center 0 #010101 !important;
     background-size: 100% auto !important
   }
 
