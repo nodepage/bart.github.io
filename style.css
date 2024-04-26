@@ -9,6 +9,7 @@ body {
 }
 
 input#email {
+    width: 400px;
     /* border: 0px solid red; */
     outline: none;
 }

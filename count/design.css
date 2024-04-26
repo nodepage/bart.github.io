@@ -63,9 +63,9 @@ h3 {
     margin-top: -80px;
 }
 
-.countdown__item {}
 
 .sale-content span {
+    margin: 3px;
     margin-top: -50px;
     font-size: 3rem;
     color: #fec802;
