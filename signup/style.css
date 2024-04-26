@@ -5,14 +5,15 @@ body {
     font-family: prompt, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-    background:#544803;
-    
+    background: #544803;
+
 }
 
 input#email {
     /* border: 0px solid red; */
     outline: none;
 }
+
 h4.title.my-3 {
     font-size: 42px;
     font-weight: 600;
@@ -70,6 +71,7 @@ p#TwitterBtn {
     cursor: pointer;
     /* padding: 0px 20px; */
 }
+
 .detailz {
     text-align: left;
     margin-bottom: 30px;
@@ -99,6 +101,7 @@ textarea#Inputref {
     padding-left: 10px;
     padding-right: 10px;
 }
+
 p#CopyBtn {
     background: red;
     width: 90px;
@@ -120,7 +123,7 @@ input#Inputref [type=text] {
     padding: 10px;
 }
 
-#shareref{
+#shareref {
     margin-top: 20px;
 }
 
@@ -135,7 +138,10 @@ input#Inputref [type=text] {
     margin-bottom: 20px;
 } */
 
+.shak {
 
+    display: flex;
+}
 
 label {
     display: block;
@@ -901,6 +907,8 @@ ul {
 }
 
 @media (min-width: 992px) {
+    
+
     .bjWvpi .text-primary {
         display: block;
     }
@@ -1163,8 +1171,8 @@ ul {
         height: auto;
         padding-top: 200px;
     }
-    #para1{ 
-        margin-left: -10px;
-    } 
-}
 
+    #para1 {
+        margin-left: -10px;
+    }
+}

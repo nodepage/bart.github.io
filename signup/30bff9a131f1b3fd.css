@@ -175,6 +175,13 @@ p#redy {
   justify-content: center;
 }
 
+.shak {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  text-align: left;
+}
+
 .mt-3 {
   display: flex;
   align-items: center;
