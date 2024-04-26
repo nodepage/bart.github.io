@@ -1,0 +1,122 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(./fonts/luckiest.ttf);
+}
+
+body {
+    font-family: myFirstFont;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo__crowntoken {
+    background: url(./Bart-05.png) no-repeat;
+    background-size: 100% auto;
+    margin: 0 30px 0 0;
+    text-indent: -9998px;
+    width: 100px;
+    height: 100px;
+    transition: all .3s ease;
+    transform: translateY(-6px);
+}
+
+
+.fRIuzH {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border-style: none;
+    border-radius: 9999px;
+    width: 160px;
+    color: white;
+    justify-content: center;
+    height: 50px;
+    font-size: 20px;
+    background-color: rgb(0 0 0);
+}
+
+h3 {
+    letter-spacing: 3px;
+    font-size: 3rem;
+    color: #000000;
+}
+
+.sale-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cot {
+    background: black;
+    padding: 0px 10px;
+    width: 590px;
+}
+
+.js-countdown {
+    margin-top: -80px;
+}
+
+.countdown__item {}
+
+.sale-content span {
+    margin-top: -50px;
+    font-size: 3rem;
+    color: #fec802;
+    text-shadow: 0 .1em 20px #000, .05em -.03em 0 #000, .05em .005em 0 #000, 0 .08em 0 #000, .05em .08em 0 #000, 0 -.03em 0 #000, -.03em -.03em 0 #000, -.03em .08em 0 #000, -.03em 0 0 #000;
+}
+p{
+    color: #ffffff;
+}
+
+
+.banner-top__sale {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner-top__sale img {
+    width: 250px;
+    height: auto;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+@media (max-width: 991px) {
+
+    h3 {
+        font-size: 2rem;
+
+    }
+
+    .cot {
+        
+        padding: 0px 10px;
+        max-width: 360px;
+    }
+
+    .banner-top__sale img {
+        width: 260px;
+        height: auto;
+    }
+
+    .logo__crowntoken {
+        margin: 0 2.6041666667vw 0 2.671875vw;
+        width: 50px;
+        height: 50px;
+        transform: translateY(-.1302083333vw);
+    }
+}

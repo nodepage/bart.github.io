@@ -140,7 +140,7 @@ input#Inputref [type=text] {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #EFE10D
+    color: #EFE10D;
     text-align: left;
     cursor: pointer;
     font-size: 14px;
