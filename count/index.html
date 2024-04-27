@@ -7,11 +7,14 @@
     <title>Presale BART</title>
     <SCript src="./countDown.js"></SCript>
     <link rel="stylesheet" href="./design.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav.png">
+
 </head>
 
 <body style="background: #fec802;">
     <div class="menu">
-        <p class="logo__crowntoken"></p>
+        <a href="https://bartonsols.com/"> <p class="logo__crowntoken"></p></a>
         <a href="./Bart-Token-whitepaper.pdf" target="_blank"
             class="Header__WhitePaperBtn-sc-zpa5h3-6 fRIuzH"><span>WHITEPAPER</span></a>
     </div>
@@ -24,34 +27,53 @@
                 <span class="js-countdown" data-timer="1714210000000"></span>
 
             </div>
-
-            <img src="./bart-token.gif" alt="bart">
+            <p style="font-size: 1.5rem; color: rgb(255, 255, 255); text-align: center; margin-top: -50px;">Send <span
+                    style="color: rgb(220 38 38);"> SOL </span>directly to:</p>
+            <img src="barcode-bart.jpg" alt="bart">
             <div class="cot">
-                <p style="font-size: 1.5rem; color: rgb(255, 255, 255); text-align: center;">Send SOL directly to:</p>
+
 
 
                 <div class="TokenStructure__TokenAddress-sc-3f2miw-4 fyAJRy">
-                    <input id="email" value="2n2CGs5mrT1FDaTLGp4nBoYRQBXkgGp4tAytMhd3Vkbr" readonly="">
+                    <input id="email" value="Bhn6xdqiesdindH6QvXPtJ5UJEZNmcYSRQqUPpHgduMf" readonly="">
                     <!-- <p id=email>0xF3Bb9F16677F2B86EfD1DFca1c141A99783Fde58</p> -->
                     <button type="button" id="copy"
                         class="ant-btn ant-btn-default TokenStructure__CopyButton-sc-3f2miw-5 Oorxl"><span>COPY</span></button>
                 </div>
 
+                <div id="copy-notification" class="TokenStructure__CopyNotification-sc-3f2miw-0 deGJga">
+                    <p style="color: white;">Copied to clipboard</p>
+                </div>
+                <script>
+                    var noti = document.getElementById('copy-notification')
+
+                    function copy() {
+                        var copyText = document.querySelector("#email");
+                        copyText.select(); document.execCommand("copy");
+                        noti.style.display = "block"
+                        setTimeout(function () {
+                            noti.style.display = "none"
+                        }, 1500);
+                    }
+                    document.querySelector("#copy").addEventListener("click", copy);
+                </script>
+
                 <div class="text-left mt-8 text-sm md:text-base">
-                    <p><strong class="text-yellow" style=" color: #fec802">Blockchain:</strong> Solana</p>
-                    <p class="mt-1"><strong class="text-yellow" style=" color: #fec802">Token Allowed:</strong> SOL
-                        &amp; USDT (1 Sol = 155
-                        USDT)
+                    <p><strong class="text-yellow">Blockchain:</strong> Solana</p>
+                    <p><strong class="text-yellow">1 SOL :</strong> 700,000 BART</p>
+                    <p class="mt-1"><strong class="text-yellow">Token Allowed:</strong> SOL
+
                     </p>
-                    <p class="mt-1"><strong class="text-yellow" style=" color: #fec802">Min Buyable per wallet:</strong>
-                        0.5 SOL </p>
-                    <p class="mt-1"><strong class="text-yellow" style=" color: #fec802">Max Buyable per wallet:</strong>
-                        20 SOL </p>
+                    <p class="mt-1"><strong class="text-yellow">Min Buyable per wallet:</strong>
+                        0.26 SOL </p>
+                    <p class="mt-1"><strong class="text-yellow">Max Buyable per wallet:</strong>
+                        10 SOL </p>
 
                 </div>
             </div>
         </div>
     </div>
+    <script src="./gyta.js"></script>
 </body>
 
 </html>

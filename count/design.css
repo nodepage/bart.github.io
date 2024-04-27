@@ -7,6 +7,16 @@ body {
     font-family: myFirstFont;
 }
 
+button#copy {
+    background: black;
+    color: white;
+    font-family: inherit;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .menu {
     display: flex;
     align-items: center;
@@ -40,7 +50,7 @@ body {
 }
 
 h3 {
-    letter-spacing: 3px;
+
     font-size: 3rem;
     color: #000000;
 }
@@ -54,7 +64,7 @@ h3 {
 }
 
 .cot {
-    background: black;
+
     padding: 0px 10px;
     width: 590px;
 }
@@ -63,16 +73,57 @@ h3 {
     margin-top: -80px;
 }
 
+.stu {
+    margin-top: -110px;
+}
 
-.sale-content span {
+.TokenStructure__TokenAddress-sc-3f2miw-4.fyAJRy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.deGJga {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0 0 0 / 53%);
+    padding: 20px;
+    border-radius: 30px;
+    z-index: 99999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    margin-top: -30px;
+    margin-left: -120px;
+    display: none;
+    text-align: center;
+}
+
+input#email {
+    font-family: inherit;
+    width: 100%;
+    padding: 9px 0px;
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: 15px;
+}
+
+.stu span {
     margin: 3px;
     margin-top: -50px;
     font-size: 3rem;
     color: #fec802;
     text-shadow: 0 .1em 20px #000, .05em -.03em 0 #000, .05em .005em 0 #000, 0 .08em 0 #000, .05em .08em 0 #000, 0 -.03em 0 #000, -.03em -.03em 0 #000, -.03em .08em 0 #000, -.03em 0 0 #000;
 }
-p{
-    color: #ffffff;
+
+p {
+    color: #000000;
+    font-size: 1.3rem;
 }
 
 
@@ -84,6 +135,7 @@ p{
 .banner-top__sale img {
     width: 250px;
     height: auto;
+    margin-top: -30px;
 }
 
 
@@ -92,31 +144,43 @@ a {
     text-decoration: none;
 }
 
-
+input {
+    width: 100%;
+}
 
 
 @media (max-width: 991px) {
-
-    h3 {
-        font-size: 2rem;
-
+    input#email {
+        font-family: inherit;
+        width: 100%;
+        padding: 9px 0px;
+        background: black;
+        color: white;
+        font-size: 0.8rem;
     }
 
-    .cot {
-        
-        padding: 0px 10px;
-        max-width: 360px;
-    }
 
-    .banner-top__sale img {
-        width: 260px;
-        height: auto;
-    }
+h3 {
+    font-size: 2rem;
 
-    .logo__crowntoken {
-        margin: 0 2.6041666667vw 0 2.671875vw;
-        width: 50px;
-        height: 50px;
-        transform: translateY(-.1302083333vw);
-    }
+}
+
+.cot {
+
+    padding: 0px 10px;
+    max-width: 360px;
+}
+
+.banner-top__sale img {
+    margin-top: -30px;
+    width: 180px;
+    height: auto;
+}
+
+.logo__crowntoken {
+    margin: 0 2.6041666667vw 0 2.671875vw;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-.1302083333vw);
+}
 }
